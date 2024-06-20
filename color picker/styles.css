@@ -1,0 +1,68 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4; /* Background color for the whole page */
+}
+
+.container {
+    text-align: center;
+    padding: 10px; /* Add padding for better spacing */
+}
+
+.color-display {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.color-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Making a circle */
+    border: 5px solid #ffffff; /* White border */
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adding shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-picker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50%; /* Making the color picker button a circle */
+    cursor: pointer;
+    opacity: 0; /* Hiding the color picker input */
+}
+
+.hex-code,
+.rgb-code,
+.hsl-code {
+    font-size: 16px; /* Reduce font size for better readability */
+    color: #333; /* Darker text color */
+    margin-top: 10px;
+}
+
+.color-palette {
+    display: flex;
+    flex-wrap: wrap; /* Allow color plates to wrap on smaller screens */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.color-box {
+    width: 40px; /* Adjust width of color plates for smaller screens */
+    height: 40px; /* Adjust height of color plates for smaller screens */
+    margin: 5px;
+    border-radius: 5px;
+}
+
