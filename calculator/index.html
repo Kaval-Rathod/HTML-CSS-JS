@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #calculator {
+            width: 100%;
+            max-width: 400px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .different{
+            background-color: #ff5252;
+        }
+
+        .different:hover{
+            background-color: #c33838;
+        }
+
+        .barabar{
+            background-color: #4c87b4;
+        }
+
+        .barabar:hover{
+            background-color: #375e7b;
+        }
+
+        input[type="text"] {
+            width:94%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: solid 1px rgb(99, 98, 98);
+        }
+
+        .button-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+
+        button {
+            height: 50px;
+            font-size: 18px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" id="result" readonly>
+        <div class="button-row">
+            <button class="different" onclick="clearInput()">C</button>
+            <button onclick="appendToInput('7')">7</button>
+            <button onclick="appendToInput('8')">8</button>
+            <button onclick="appendToInput('9')">9</button>
+            <button onclick="appendToInput('+')">+</button>
+            <button onclick="appendToInput('4')">4</button>
+            <button onclick="appendToInput('5')">5</button>
+            <button onclick="appendToInput('6')">6</button>
+            <button onclick="appendToInput('-')">-</button>
+            <button onclick="appendToInput('1')">1</button>
+            <button onclick="appendToInput('2')">2</button>
+            <button onclick="appendToInput('3')">3</button>
+            <button onclick="appendToInput('*')">*</button>
+            <button onclick="appendToInput('.')">.</button>
+            <button onclick="appendToInput('0')">0</button>
+           
+            <br>
+            <button onclick="appendToInput('/')">/</button>
+            <button class="barabar" onclick="calculateResult()" style="grid-column: span 2;">=</button>
+           
+        </div>
+    </div>
+
+    <script>
+        function clearInput() {
+            document.getElementById("result").value = "";
+        }
+
+        function appendToInput(value) {
+            document.getElementById("result").value += value;
+        }
+
+        function calculateResult() {
+            try {
+                const input = document.getElementById("result").value;
+                const result = eval(input); // Using eval for simplicity (not recommended for production)
+                document.getElementById("result").value = result;
+            } catch (error) {
+                document.getElementById("result").value = "Error";
+            }
+        }
+    </script>
+</body>
+</html>
