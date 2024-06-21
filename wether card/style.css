@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: #a0c8ff; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card{
+    width: 50vw;
+    margin-top: 10%;
+    /* background-color:  #767676;    */
+    background-image: linear-gradient(rgb(69, 225, 227), rgb(247, 247, 105));
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    box-shadow: rgb(137, 137, 137) 10px 10px 10px;
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.search input{
+    border: none;
+    padding: 10px;
+    background-color: none;
+    flex: 1;
+    border-radius: 80px;
+    min-width: 10px;
+    outline: none;
+    box-shadow: rgb(52, 52, 52) 1px 1px 10px;
+}
+
+.search input:hover{
+    background-color: #f1f1f1;
+    transition: 0.3s;
+}
+
+.search button{
+    border-color: none;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+
+.search img{
+    box-shadow: rgb(52, 52, 52) 1px 1px 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 16px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search img:hover{
+    background-color: #f1f1f1;
+    transition: 0.3s;
+}
+
+.wether{
+    /* display: flex; */
+    justify-content: center;
+    margin: 40px 0; 
+}
+
+.wether img{
+    width: 30vw;
+    margin-bottom: 25px;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.details img{
+    width: 10vw;
+}
+
+.sec{
+    font-size: 3vw;
+}
+
+.hum{
+    gap: 10px;
+}
