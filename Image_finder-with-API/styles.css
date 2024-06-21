@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Exo+2:ital,wght@1,100&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito+Sans:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Abel', 'Exo 2', 'Merriweather', 'Nunito Sans', sans-serif;
+}
+
+body{
+    line-height: 1.5;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 3rem;
+    color: rgb(73, 72, 72);
+}
+
+.inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+#search-input{
+    width: 50vh;
+    height: 30px;
+    margin: 5px;
+    padding: 5px 20px;
+    font-size: 1.3rem;
+    box-shadow: 0 0 6px rgba(116, 114, 114, 0.612);
+    border: none;
+    border-radius: 5px;
+    color: rgb(75, 74, 74);
+
+}
+
+#button{
+    width: auto;
+    padding: 6px 20px;
+    box-shadow: 0 0 6px rgb(1, 138, 1);
+    border-radius: 5px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(1, 138, 1);
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+
+.search-results{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search-result{
+    margin-bottom: 15px;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(116, 114, 114, 0.612);
+    overflow: hidden;
+}
+
+.search-result img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.search-result:hover img{ 
+    opacity: 0.8;
+}
+
+.search-result a{
+    text-decoration: none;
+    color: rgb(48, 47, 47);
+    display: block;
+    padding: 5px;
+    text-transform: capitalize;
+    font-size: large;
+}
+
+#show-more{
+    border: none;
+    background-color: rgb(5, 134, 167);
+    color: aliceblue;
+    padding: 2px 5px;
+    font-size: larger;
+    border-radius: 5px;
+    margin: 10px 0px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+
+    .inputs{
+        width: 100%;
+    }
+    
+}
+
